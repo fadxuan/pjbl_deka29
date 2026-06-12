@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Profil dan Form | DEKA</title>
+    <!-- Menghubungkan CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+   
+    <header>
+        <h1>Website Profil Saya</h1>
+        
+        <nav>
+            <a href="#profil">Menu 1 - Profil</a>
+            <a href="#form">Menu 2 - Form Lengkap</a>
+        </nav>
+    </header>
+
+    <!-- Konten Utama -->
+    <main>
+
+    
+        <section id="profil" class="profil">
+            <h2>Profil Saya</h2>
+            
+           <div class="profil-card">
+ <section class="profil">
+    <!-- Foto di kiri -->
+    <img src="3.jpeg" alt="Foto Profil">
+
+    <!-- Teks di kanan (dibungkus div agar tidak berantakan) -->
+    <div class="biodata-singkat">
+        <h2>Profil Saya</h2>
+        <p><b>Nama:</b> Deka Fajar Bayu Anggoro</p>
+        <p><b>Kelas:</b> X PPLG 1</p>
+        <p><b>Sekolah:</b> SMK Negeri 1 Purbalingga</p>
+        <p><b>Hobi:</b> Sepak Bola dan Gaming</p>
+        <p><b>Cita-cita:</b> Football player</p>
+        <!-- dst... -->
+    </div>
+</section>
+            <p class="deskripsi">
+                Halo, saya adalah Deka Fajar Bayu Anggoro, siswa dari SMK Negeri 1 Purbalingga yang saat ini duduk di kelas 10 jurusan PPLG (Pengembangan Perangkat Lunak dan Gim). Saya lahir pada tanggal 29 September 2009 di Purbalingga. Saya tertarik mempelajari dunia teknologi, khususnya dalam bidang pemrograman, pembuatan aplikasi, dan pengembangan gim. Saya ingin terus belajar agar dapat mengembangkan kemampuan dan menjadi pribadi yang kreatif serta inovatif di era digital.
+
+Saya memiliki hobi membaca, bermain gim, dan mencoba hal-hal baru yang positif. Bermain gim bagi saya bukan hanya hiburan, tetapi juga dapat melatih strategi, kerja sama, dan menambah wawasan tentang dunia digital. Selain itu, saya juga senang mencoba pengalaman baru yang dapat membantu meningkatkan kemampuan diri dan menambah pengetahuan.
+
+Saya bercita-cita menjadi pesepakbola profesional . Saya percaya bahwa dengan kerja keras, disiplin, dan semangat belajar, saya dapat meraih cita-cita dan menjadi pribadi yang sukses di masa depan.
+
+            </p>
+        </section>
+
+        <hr>
+
+        <!-- Bagian Form -->
+        <section id="form">
+            <h2>Form Data Diri</h2>
+
+            <form id="formPendaftaran">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><label for="nama">Nama Lengkap</label></td>
+                            <td><input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" required></td>
+                        </tr>
+
+                        <tr>
+                            <td><label for="alamat">Alamat</label></td>
+                            <td><textarea id="alamat" name="alamat" placeholder="Masukkan alamat rumah" rows="3" required></textarea></td>
+                        </tr>
+
+                        <tr>
+                            <td><label for="tempatLahir">Tempat Lahir</label></td>
+                            <td><input type="text" id="tempatLahir" name="tempatLahir" placeholder="Kota kelahiran" required></td>
+                        </tr>
+
+                        <tr>
+                            <td><label for="tanggalLahir">Tanggal Lahir</label></td>
+                            <td><input type="date" id="tanggalLahir" name="tanggalLahir" required></td>
+                        </tr>
+
+                        <tr>
+                            <td><label for="nomorHp">Nomor HP</label></td>
+                            <td><input type="tel" id="nomorHp" name="nomorHp" placeholder="08xxxxxxxxxx" required></td>
+                        </tr>
+
+                        <tr>
+                            <td><label for="email">Email</label></td>
+                            <td><input type="email" id="email" name="email" placeholder="contoh@email.com" required></td>
+                        </tr>
+
+                        <tr>
+                            <td><label for="password">Password</label></td>
+                            <td><input type="password" id="password" name="password" placeholder="Minimal 8 karakter" required></td>
+                        </tr>
+
+                        <tr>
+                            <td>Jenis Kelamin</td>
+                            <td>
+                                <input type="radio" id="jkL" name="jk" value="Laki-laki"> 
+                                <label for="jkL">Laki-laki</label>
+                                <input type="radio" id="jkP" name="jk" value="Perempuan"> 
+                                <label for="jkP">Perempuan</label>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><label for="agama">Agama</label></td>
+                            <td>
+                                <select id="agama" name="agama">
+                                    <option value="" disabled selected>Pilih Agama</option>
+                                    <option value="Islam">Islam</option>
+                                    <option value="Kristen">Kristen</option>
+                                    <option value="Katolik">Katolik</option>
+                                    <option value="Hindu">Hindu</option>
+                                    <option value="Buddha">Buddha</option>
+                                    <option value="Khonghucu">Khonghucu</option>
+                                </select>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Hobi</td>
+                            <td>
+                                <input type="checkbox" id="hobi1" name="hobi" value="Membaca"> 
+                                <label for="hobi1">Membaca</label>
+                                <input type="checkbox" id="hobi2" name="hobi" value="Olahraga"> 
+                                <label for="hobi2">Olahraga</label>
+                                <input type="checkbox" id="hobi3" name="hobi" value="Gaming"> 
+                                <label for="hobi3">Gaming</label>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><label for="foto">Upload Foto</label></td>
+                            <td><input type="file" id="foto" name="foto" accept="image/*"></td>
+                        </tr>
+
+                      
+
+                       
+
+                        <tr>
+                            <td colspan="2" class="text-center">
+                                <button type="submit" class="btn-submit">Kirim Data</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </section>
+
+        <hr>
+
+        <!-- Bagian Output Data -->
+        <section id="hasilData">
+            <h2>Data Yang Dikirim</h2>
+            <div id="output" class="output-box">
+                <p class="placeholder-text">Belum ada data yang dikirim.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Website -->
+    <footer>
+        <p>&copy; 2026 DEKA FAJAR BAYU ANGGORO - X PPLG 1. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Menghubungkan JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
