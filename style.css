@@ -1,322 +1,659 @@
 :root {
+
     --primary: #6366f1;
+
     --primary-hover: #4f46e5;
+
     --primary-light: #f5f3ff;
+
     --accent: #0ea5e9;
+
     --slate-950: #020617;
+
     --slate-900: #0f172a;
+
     --slate-800: #1e293b;
+
     --slate-700: #334155;
+
     --slate-200: #e2e8f0;
+
     --slate-50: #f8fafc;
+
     --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+
     --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+
 }
+
+
 
 *{
+
     margin: 0;
+
     padding: 0;
+
     box-sizing: border-box;
+
 }
+
+
 
 html {
+
     scroll-behavior: smooth;
+
 }
+
+
 
 body{
+
     font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+
     background: #fafafa;
+
     color: var(--slate-800);
+
     line-height: 1.6;
+
     -webkit-font-smoothing: antialiased;
+
 }
+
+
 
 header{
+
     background: radial-gradient(circle at top right, var(--slate-900), var(--slate-950));
+
     color: white;
+
     text-align: center;
+
     padding: 100px 20px;
+
     position: relative;
+
     overflow: hidden;
+
 }
+
+
 
 header::before {
+
     content: '';
+
     position: absolute;
+
     inset: 0;
+
     background: linear-gradient(45deg, rgba(99, 102, 241, 0.15) 0%, rgba(14, 165, 233, 0.05) 100%);
+
     pointer-events: none;
+
 }
+
+
 
 header h1{
+
     font-size: 52px;
+
     font-weight: 800;
+
     letter-spacing: -1.5px;
+
     margin-bottom: 12px;
+
     background: linear-gradient(to right, #ffffff, #cbd5e1);
+
     -webkit-background-clip: text;
+
     -webkit-text-fill-color: transparent;
+
 }
+
+
 
 nav {
+
     background: rgba(255, 255, 255, 0.7);
+
     backdrop-filter: blur(20px);
+
     -webkit-backdrop-filter: blur(20px);
+
     display: flex;
+
     justify-content: center;
+
     gap: 8px;
+
     padding: 12px;
+
     position: sticky;
+
     top: 0;
+
     z-index: 100;
+
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+
 }
+
+
 
 nav a{
+
     text-decoration: none;
+
     color: var(--slate-700);
+
     font-weight: 600;
+
     font-size: 14px;
+
     transition: all 0.2s ease;
+
     padding: 8px 16px;
+
     border-radius: 99px;
+
 }
+
+
 
 nav a:hover{
+
     background: rgba(0, 0, 0, 0.04);
+
     color: var(--slate-900);
+
 }
+
+
 
 nav a.active {
+
     background: var(--slate-900);
+
     color: white;
+
 }
+
+
 
 section{
+
     width: 90%;
+
     max-width: 1000px;
+
     margin: 60px auto;
+
     background: white;
+
     border-radius: 32px;
+
     padding: 50px;
+
     border: 1px solid rgba(0, 0, 0, 0.04);
+
     box-shadow: var(--shadow-md);
+
     transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+
 }
+
+
 
 section:hover {
+
     transform: translateY(-2px);
+
     box-shadow: var(--shadow-lg);
+
 }
+
+
 
 .profil {
+
     background: linear-gradient(180deg, #ffffff 0%, var(--primary-light) 100%);
+
     display: flex;              
+
     align-items: center;        
+
     justify-content: center;    
+
     gap: 50px;                  
+
     text-align: left;           
+
 }
+
+
 
 .biodata-singkat {
+
     max-width: 600px;
+
 }
+
+
 
 .profil h2, #form h2, #hasilData h2{
+
     font-size: 38px;
+
     font-weight: 800;
+
     margin-bottom: 24px;
+
     color: var(--slate-950);
+
     letter-spacing: -1px;
+
 }
+
+
 
 .profil img{
+
     width: 200px;
+
     height: 200px;
+
     border-radius: 28% 72% 70% 30% / 30% 30% 70% 70%;
+
     border: none;
+
     box-shadow: 0 20px 40px rgba(99, 102, 241, 0.2);
+
     object-fit: cover;
+
     flex-shrink: 0;             
+
     transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
 }
+
+
 
 .profil img:hover {
+
     transform: scale(1.03) rotate(2deg);
+
     border-radius: 50%;
+
 }
+
+
 
 .profil p{
+
     margin-bottom: 14px;
+
     font-size: 17px;
+
     color: var(--slate-700);
+
 }
+
+
 
 .profil p b{
+
     color: var(--primary);
+
     font-weight: 700;
+
 }
+
+
 
 table{
+
     width: 100%;
+
     border-collapse: separate;
+
     border-spacing: 0 16px; 
+
 }
+
+
 
 table td{
+
     padding: 6px;
+
     vertical-align: middle;
+
 }
+
+
 
 table td:first-child {
+
     font-weight: 600;
+
     color: var(--slate-700);
+
     width: 28%;
+
     font-size: 15px;
+
 }
+
+
 
 input, textarea, select{
+
     width: 100%;
+
     padding: 16px 18px;
+
     border: 1.5px solid var(--slate-200);
+
     border-radius: 16px;
+
     outline: none;
+
     font-size: 15px;
+
     color: var(--slate-900);
+
     background-color: var(--slate-50);
+
     transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+
 }
+
+
 
 input:focus, textarea:focus, select:focus{
+
     background-color: #ffffff;
+
     border-color: var(--primary);
+
     box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.12);
+
 }
+
+
 
 textarea{
+
     resize: vertical;
+
     min-height: 140px;
+
 }
+
+
 
 input[type="radio"], input[type="checkbox"]{
+
     width: 20px;
+
     height: 20px;
+
     margin-right: 12px;
+
     cursor: pointer;
+
     accent-color: var(--primary);
+
     vertical-align: middle;
+
 }
+
+
 
 .radio-group, .checkbox-group {
+
     display: inline-flex;
+
     align-items: center;
+
     margin-right: 24px;
+
     cursor: pointer;
+
     font-size: 15px;
+
     font-weight: 500;
+
     color: var(--slate-700);
+
 }
+
+
 
 button{
+
     background: var(--slate-950);
+
     color: white;
+
     border: none;
+
     padding: 18px 40px;
+
     border-radius: 16px;
+
     font-size: 16px;
+
     font-weight: 600;
+
     cursor: pointer;
+
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
     transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+
 }
+
+
 
 button:hover{
+
     background: var(--primary);
+
     transform: translateY(-2px);
+
     box-shadow: 0 12px 24px rgba(99, 102, 241, 0.25);
+
 }
+
+
 
 button:active {
+
     transform: translateY(0);
+
 }
+
+
 
 #output{
+
     margin-top: 40px;
+
     background: linear-gradient(135deg, #f0fdf4 0%, #e8f5e9 100%);
+
     padding: 35px;
+
     border-radius: 24px;
+
     border-left: none;
+
     border: 1px solid rgba(34, 197, 94, 0.15);
+
     box-shadow: var(--shadow-sm);
+
 }
+
+
 
 #output h3{
+
     margin-bottom: 24px;
+
     color: #14532d;
+
     font-size: 24px;
+
     font-weight: 800;
+
     letter-spacing: -0.5px;
+
 }
+
+
 
 #output p{
+
     margin-bottom: 14px;
+
     color: #166534;
+
     font-size: 16px;
+
     font-weight: 500;
+
 }
 
+
+
 @media(max-width: 768px){
+
     section{
+
         width: 94%;
+
         padding: 32px 24px;
+
         margin: 30px auto;
+
         border-radius: 24px;
+
     }
+
+
 
     header{
+
         padding: 80px 20px;
+
     }
+
+
 
     header h1{
+
         font-size: 38px;
+
     }
+
+
 
     nav{
+
         gap: 6px;
+
         padding: 8px;
+
     }
+
+
 
     nav a {
+
         padding: 8px 12px;
+
         font-size: 13px;
+
     }
+
+
 
     .profil {
+
         flex-direction: column; 
+
         text-align: center;     
+
         gap: 30px;
+
     }
+
+
 
     .profil img{
+
         width: 160px;
+
         height: 160px;
+
     }
+
+
 
     table, tbody, tr, td {
+
         display: block;
+
         width: 100%;
+
     }
+
+
 
     table td:first-child {
+
         width: 100%;
+
         margin-bottom: 4px;
+
         padding-top: 12px;
+
     }
 
+
+
     .profil h2, #form h2, #hasilData h2{
+
         font-size: 30px;
+
+        /* Tambahkan ini di bagian paling bawah file style.css */
+
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Opsional: Mengubah warna background kotak output utama menjadi netral 
+   karena di dalamnya sekarang ada banyak card data */
+#output {
+    background: var(--slate-50);
+    border: 1px solid var(--slate-200);
+}
+
+    
+
 }
