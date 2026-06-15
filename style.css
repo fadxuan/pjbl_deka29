@@ -316,5 +316,7 @@ button:active {
 
     .profil h2, #form h2, #hasilData h2{
         font-size: 30px;
-    }
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
